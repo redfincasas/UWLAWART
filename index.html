@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UWLAW ART — Custom Mural Painters in NYC | Bronx-Based</title>
+<meta name="description" content="Custom mural artists based in Morris Heights, the Bronx, painting hand-done murals across all five boroughs — storefronts, interiors, rooftops, brand walls. Projects from $250 to $50k depending on scope.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "UWLAW ART",
+  "image": "logo.png",
+  "description": "Custom mural painting studio serving New York City, based in the Morris Heights section of the Bronx. Storefronts, interiors, exteriors, rooftops, and brand activations.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bronx",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "New York City"
+  },
+  "url": "https://instagram.com/uwlawart",
+  "priceRange": "$250-$50000"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="UWLAW ART home">
+    <img src="logo.png" alt="UWLAW ART" class="logo-img">
+  </a>
+  <nav class="site-nav">
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Start a project</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="eyebrow mono">MORRIS HEIGHTS, BRONX — SERVING ALL 5 BOROUGHS</p>
+    <h1 class="hero-title">
+      <span class="line">WALLS</span>
+      <span class="line accent-clip">BECOME</span>
+      <span class="line">STATEMENTS</span>
+    </h1>
+    <p class="hero-sub">UWLAW ART is a custom mural studio based in the Bronx, painting
+      walls across New York City — storefronts, lobbies, rooftops, blocks. If it has a wall, we have an idea.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View the work</a>
+      <a href="#contact" class="btn btn-ghost">Get a quote</a>
+    </div>
+  </div>
+  <div class="hero-slab" aria-hidden="true"></div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker mono" aria-hidden="true">
+  <div class="ticker-track">
+    <span>MURALS</span><span>·</span><span>BRAND ACTIVATIONS</span><span>·</span>
+    <span>STOREFRONTS</span><span>·</span><span>INTERIOR</span><span>·</span>
+    <span>EXTERIOR</span><span>·</span><span>ROOFTOPS</span><span>·</span>
+    <span>CUSTOM WORK</span><span>·</span>
+    <span>MURALS</span><span>·</span><span>BRAND ACTIVATIONS</span><span>·</span>
+    <span>STOREFRONTS</span><span>·</span><span>INTERIOR</span><span>·</span>
+    <span>EXTERIOR</span><span>·</span><span>ROOFTOPS</span><span>·</span>
+    <span>CUSTOM WORK</span><span>·</span>
+  </div>
+</div>
+
+<!-- ============ WORK / INSTAGRAM CAROUSEL ============ -->
+<section class="work" id="work">
+  <div class="section-head">
+    <p class="eyebrow mono">ON THE WALLS</p>
+    <h2>Latest from <a href="https://instagram.com/uwlawart" target="_blank" rel="noopener">@uwlawart</a></h2>
+  </div>
+
+  <!--
+    ================= WORK CAROUSEL =================
+    For now this carousel runs on local photos in /work/ so the site has real
+    content while the Instagram integration is pending. Add or remove photos
+    by adding/removing <div class="carousel-slide"> blocks below (and matching
+    <button class="carousel-dot"> in .carousel-dots) — script.js reads whatever
+    slides exist, no JS changes needed.
+
+    LATER, swap this for the live Instagram feed:
+    1. Go to https://snapwidget.com and sign in with the @uwlawart Instagram account.
+    2. Create a widget → choose the "Carousel" or "Slider" layout.
+    3. Set accent color to #2946FF and background to #101114 to match the site.
+    4. Copy the generated <iframe> and drop it in, replacing the whole
+       .carousel block below.
+  -->
+  <div class="ig-frame">
+    <div class="carousel" id="work-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="work/work-1.jpg" alt="UWLAW ART mural of a sports car with city skyline, parking garage, NYC" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-2.jpg" alt="UWLAW ART jazz lounge interior mural" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-3.jpg" alt="UWLAW ART countryside landscape mural painted on a garage door" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-4.jpg" alt="UWLAW ART Brooklyn Bridge mural" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-5.jpg" alt="UWLAW ART Amigo Produce storefront mural" loading="lazy"></div>
+      </div>
+
+      <button class="carousel-btn carousel-prev" aria-label="Previous photo">‹</button>
+      <button class="carousel-btn carousel-next" aria-label="Next photo">›</button>
+
+      <div class="carousel-dots">
+        <button class="carousel-dot is-active" aria-label="Go to photo 1"></button>
+        <button class="carousel-dot" aria-label="Go to photo 2"></button>
+        <button class="carousel-dot" aria-label="Go to photo 3"></button>
+        <button class="carousel-dot" aria-label="Go to photo 4"></button>
+        <button class="carousel-dot" aria-label="Go to photo 5"></button>
+      </div>
+    </div>
+  </div>
+
+  <a class="ig-follow mono" href="https://instagram.com/uwlawart" target="_blank" rel="noopener">FOLLOW @UWLAWART →</a>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="section-head">
+    <p class="eyebrow mono">HOW IT WORKS</p>
+    <h2>From bare wall to done</h2>
+  </div>
+
+  <ol class="process-list">
+    <li class="process-step">
+      <span class="step-num mono">01</span>
+      <div class="step-body">
+        <h3>Consult</h3>
+        <p>We walk the space, talk scale, budget, and timeline. Every wall has different light, texture, and traffic — we plan around yours.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-num mono">02</span>
+      <div class="step-body">
+        <h3>Design</h3>
+        <p>Concept sketches and a full color comp before any paint touches brick. You approve the exact piece we're going to paint.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-num mono">03</span>
+      <div class="step-body">
+        <h3>Paint</h3>
+        <p>Full crew on site, working fast without cutting corners. Most storefront-scale murals wrap in 2–5 days depending on size and surface.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-num mono">04</span>
+      <div class="step-body">
+        <h3>Reveal</h3>
+        <p>Sealed, protected, and photographed. The wall's yours — and it'll be on @uwlawart by the weekend.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="section-head">
+    <p class="eyebrow mono">QUESTIONS</p>
+    <h2>Custom murals, answered</h2>
+    <p class="faq-sub">The stuff people usually ask before booking a custom mural in NYC.</p>
+  </div>
+
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary>Do you do custom murals in NYC?</summary>
+      <div class="faq-a"><p>Yes — that's the whole business. Every mural we paint is designed from scratch for the wall and client it's going on. We're based in Morris Heights in the Bronx and work across all five boroughs.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How much does a custom mural cost?</summary>
+      <div class="faq-a"><p>Our projects run from around $250 for a small feature wall or sign-style piece up to $50,000 for large-scale, multi-day building murals. Price comes down to size, surface complexity, height/access needs, and turnaround time. We give a firm quote after seeing the wall.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where are you based, and do you travel?</summary>
+      <div class="faq-a"><p>We're based in Morris Heights, the Bronx, and take on projects across Manhattan, Brooklyn, Queens, Staten Island, and the rest of the Bronx. Projects outside NYC are handled case by case.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How long does a mural take to complete?</summary>
+      <div class="faq-a"><p>Most storefront-scale murals take 2–5 days. Small interior pieces can wrap in a single day. Large-scale exterior or building murals can run one to a few weeks depending on height, weather, and detail level.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you paint both interior and exterior murals?</summary>
+      <div class="faq-a"><p>Both. Interior work includes offices, restaurants, retail, and residential rooms. Exterior work includes storefronts, gates, rooftops, and full building walls, using paint rated for outdoor exposure.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What surfaces can you paint on?</summary>
+      <div class="faq-a"><p>Brick, cinder block, stucco, drywall, roll-down security gates, plywood, and most primed exterior surfaces. If a surface needs special prep or primer, we handle that as part of the quote.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you offer free estimates?</summary>
+      <div class="faq-a"><p>Yes. Send photos and measurements of the wall through the contact form below and we'll give you a ballpark before scheduling an in-person walk-through.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I see examples of past murals?</summary>
+      <div class="faq-a"><p>The full portfolio is on <a href="https://instagram.com/uwlawart" target="_blank" rel="noopener">@uwlawart</a> and pulled live into the work section above — that's the most current look at finished walls.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you paint commercial or storefront murals?</summary>
+      <div class="faq-a"><p>Commercial work is most of what we do — storefronts, restaurants, gyms, offices, and brand activations for companies that want a wall that photographs well and gets talked about.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you paint murals for homes and apartments?</summary>
+      <div class="faq-a"><p>Yes, residential murals are common — kids' rooms, accent walls, building lobbies, backyard walls. Scale and pricing scale down accordingly.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can you paint from my own design or reference image?</summary>
+      <div class="faq-a"><p>Yes. If you already have a design, logo, or reference image, we'll adapt it to the wall's scale and surface. If not, our team designs the concept with you from the consult.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do I need a permit to get an exterior mural painted in NYC?</summary>
+      <div class="faq-a"><p>Painting a mural on private property you own or have permission to alter generally doesn't require a special permit, but landmarked buildings, certain commercial corridors, and building-height work can have additional rules. We'll flag it during the consult if your project needs anything filed.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What paint do you use, and will it hold up outdoors?</summary>
+      <div class="faq-a"><p>Exterior work is done with exterior-rated acrylics and sealed with a UV-resistant topcoat so color holds up against sun, rain, and NYC weather. We can talk through expected lifespan and touch-up timing for your specific wall.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you require a deposit?</summary>
+      <div class="faq-a"><p>Yes, projects are booked with a deposit once the design and quote are approved, with the balance due on completion. Exact terms are laid out in the project agreement.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How far in advance should I book?</summary>
+      <div class="faq-a"><p>2–4 weeks is typical, more for large-scale or multi-wall projects and during peak spring/summer months when exterior work is in high demand.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you do large-scale or full-building murals?</summary>
+      <div class="faq-a"><p>Yes — building-scale murals are where the higher end of our price range comes in, factoring lift/scaffold access, paint volume, and crew time.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you do brand murals or logo activations for businesses?</summary>
+      <div class="faq-a"><p>Yes, brand and logo murals for storefronts, offices, and pop-up activations are a regular part of the work — we'll match brand colors and typography to the wall.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you prep and clean the wall before painting?</summary>
+      <div class="faq-a"><p>Yes, surface prep — pressure washing, patching, priming as needed — is included in the scope so the finished mural holds up properly.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>I don't have a design yet — can you help create one?</summary>
+      <div class="faq-a"><p>That's most projects. The design phase of our process is built for exactly this: we sketch concepts and a full color comp with you before any paint goes on the wall.</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you offer touch-ups or maintenance after the mural is finished?</summary>
+      <div class="faq-a"><p>Yes, we offer touch-up service for wear, weather damage, or vandalism on murals we've painted. Reach out through the contact form and we'll assess what's needed.</p></div>
+    </details>
+
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do you do custom murals in NYC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — every mural is designed from scratch for the wall and client it's going on. We're based in Morris Heights, the Bronx, and work across all five boroughs."}},
+    {"@type": "Question", "name": "How much does a custom mural cost?", "acceptedAnswer": {"@type": "Answer", "text": "Projects run from around $250 for a small feature wall up to $50,000 for large-scale, multi-day building murals, depending on size, complexity, and timeline."}},
+    {"@type": "Question", "name": "Where are you based, and do you travel?", "acceptedAnswer": {"@type": "Answer", "text": "We're based in Morris Heights, the Bronx, and take on projects across Manhattan, Brooklyn, Queens, Staten Island, and the rest of the Bronx."}},
+    {"@type": "Question", "name": "How long does a mural take to complete?", "acceptedAnswer": {"@type": "Answer", "text": "Most storefront-scale murals take 2–5 days. Small interior pieces can wrap in a single day. Large-scale exterior or building murals can run one to a few weeks."}},
+    {"@type": "Question", "name": "Do you paint both interior and exterior murals?", "acceptedAnswer": {"@type": "Answer", "text": "Both. Interior work includes offices, restaurants, retail, and residential rooms. Exterior work includes storefronts, gates, rooftops, and full building walls."}},
+    {"@type": "Question", "name": "What surfaces can you paint on?", "acceptedAnswer": {"@type": "Answer", "text": "Brick, cinder block, stucco, drywall, roll-down security gates, plywood, and most primed exterior surfaces."}},
+    {"@type": "Question", "name": "Do you offer free estimates?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, send photos and measurements of the wall and we'll give a ballpark before scheduling an in-person walk-through."}},
+    {"@type": "Question", "name": "Can I see examples of past murals?", "acceptedAnswer": {"@type": "Answer", "text": "The full portfolio is on Instagram at @uwlawart and shown live on this site's work section."}},
+    {"@type": "Question", "name": "Do you paint commercial or storefront murals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, commercial work including storefronts, restaurants, gyms, offices, and brand activations is most of what we do."}},
+    {"@type": "Question", "name": "Do you paint murals for homes and apartments?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, residential murals are common, including kids' rooms, accent walls, building lobbies, and backyard walls."}},
+    {"@type": "Question", "name": "Can you paint from my own design or reference image?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we can adapt an existing design, logo, or reference image to the wall's scale and surface, or design a concept with you from scratch."}},
+    {"@type": "Question", "name": "Do I need a permit to get an exterior mural painted in NYC?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no special permit is needed on private property with owner permission, though landmarked buildings and certain commercial corridors can have additional rules, which we flag during the consult."}},
+    {"@type": "Question", "name": "What paint do you use, and will it hold up outdoors?", "acceptedAnswer": {"@type": "Answer", "text": "Exterior work uses exterior-rated acrylics sealed with a UV-resistant topcoat to hold up against sun, rain, and NYC weather."}},
+    {"@type": "Question", "name": "Do you require a deposit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, projects are booked with a deposit once the design and quote are approved, with the balance due on completion."}},
+    {"@type": "Question", "name": "How far in advance should I book?", "acceptedAnswer": {"@type": "Answer", "text": "2–4 weeks is typical, more for large-scale or multi-wall projects and during peak spring and summer months."}},
+    {"@type": "Question", "name": "Do you do large-scale or full-building murals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, building-scale murals are where the higher end of our pricing comes in, factoring lift or scaffold access, paint volume, and crew time."}},
+    {"@type": "Question", "name": "Do you do brand murals or logo activations for businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, brand and logo murals for storefronts, offices, and pop-up activations are a regular part of the work."}},
+    {"@type": "Question", "name": "Do you prep and clean the wall before painting?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, surface prep such as pressure washing, patching, and priming is included in the project scope."}},
+    {"@type": "Question", "name": "I don't have a design yet — can you help create one?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, most projects start without a finished design. We sketch concepts and a full color comp with the client before painting begins."}},
+    {"@type": "Question", "name": "Do you offer touch-ups or maintenance after the mural is finished?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we offer touch-up service for wear, weather damage, or vandalism on murals we've painted."}}
+  ]
+}
+</script>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <h2>Let's paint<br>something.</h2>
+    <p class="contact-sub">Based in Morris Heights, the Bronx — working across all five boroughs.
+      Projects typically run $250–$50,000 depending on size, complexity, and timeline.
+      Tell us about the wall and we'll get back within 2 business days.</p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="location">Wall location / neighborhood</label>
+        <input type="text" id="location" name="location" placeholder="e.g. Bushwick, storefront">
+      </div>
+      <div class="field">
+        <label for="message">Tell us about the project</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-wide">Send it</button>
+      <p class="form-note mono" id="form-note"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <img src="logo.png" alt="UWLAW ART" class="logo-img logo-img-footer">
+  </div>
+  <div class="footer-links mono">
+    <a href="https://instagram.com/uwlawart" target="_blank" rel="noopener">Instagram</a>
+    <a href="#work">Work</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p class="footer-meta mono">MORRIS HEIGHTS, BRONX — SERVING NYC · © <span id="year"></span> UWLAW ART</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
