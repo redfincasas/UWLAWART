@@ -10,14 +10,23 @@ Plain HTML/CSS/JS, no build step, no dependencies. Deploys straight to Cloudflar
 ## 1. Logo
 `logo.png` is already wired into the header and footer, sitting on a small white chip so the black artwork reads clearly against the dark background (the original file has a black mark on solid white, and the site background is near-black — the chip keeps it legible instead of the black fill disappearing). Swap `logo.png` for a new file anytime and the chip sizing will still work; just keep it reasonably tight-cropped.
 
-## 2. Wire up the Instagram carousel
-This uses a third-party embed (no custom scraping code, no API tokens to manage):
+## 2. The work carousel
+Right now the carousel runs on 9 real photos sitting in the `/work` folder (`work-1.jpg` … `work-9.jpg`) — left/right arrow buttons, dot navigation, keyboard arrows, and swipe on mobile all work already, no API needed.
 
+**To add or swap photos:** drop a new image in `/work`, then in `index.html` either edit an existing line or add a new one inside `<div class="carousel-track">`:
+
+```html
+<div class="carousel-slide"><img src="work/work-10.jpg" alt="Describe the mural here" loading="lazy"></div>
+```
+
+Add a matching `<button class="carousel-dot">` in `.carousel-dots` for each slide — script.js counts whatever's there, so nothing else needs to change.
+
+**To switch to the live Instagram feed later:**
 1. Go to **snapwidget.com** and log in with the `@uwlawart` Instagram account.
-2. Create a widget → choose the **Carousel** or **Slider** layout — these give visitors left/right click-through navigation between photos, which is what you asked for.
-3. In the widget's style settings, set the accent color to `#2946FF` and background to `#101114` so it blends with the site.
+2. Create a widget → choose the **Carousel** or **Slider** layout — these give visitors left/right click-through navigation between photos.
+3. Set the accent color to `#2946FF` and background to `#101114` so it blends with the site.
 4. Copy the `<iframe>` code SnapWidget gives you.
-5. Open `index.html`, find `<div id="ig-embed">`, and paste the iframe in, replacing the placeholder `<div class="ig-placeholder">` block.
+5. In `index.html`, replace the whole `<div class="carousel" id="work-carousel">...</div>` block with the iframe.
 
 EmbedSocial works the same way if you'd rather use that instead.
 
@@ -25,9 +34,13 @@ EmbedSocial works the same way if you'd rather use that instead.
 20 questions covering pricing, service area, timelines, permits, surfaces, and process — aimed at "custom mural nyc" style searches. It includes `FAQPage` and `LocalBusiness` structured data (JSON-LD, in `index.html`) so search engines and AI assistants/agents can surface these answers directly. If your pricing, location, or turnaround times change, update both the visible `<details>` blocks *and* the matching JSON-LD text so they stay in sync.
 
 ## 4. Contact form
-The form currently just shows a confirmation message in the browser — it doesn't send anywhere yet. Two easy options:
-- **Formspree / Getform**: sign up, change the `<form>` tag's `action` attribute to the URL they give you, and it'll submit for real with zero code changes.
-- **Cloudflare Pages Function**: add a `/functions/contact.js` file that forwards submissions to an email API (Resend, Postmark, etc). More setup, but keeps everything on Cloudflare.
+The form submits directly to `info@uwlawart.com` using **FormSubmit** — no backend, no signup, nothing to configure.
+
+- **The first submission after this goes live triggers a one-time confirmation email** to `info@uwlawart.com` from FormSubmit. Someone needs to open that email and click "Activate Form" once. Every submission after that lands in the inbox normally, formatted as a table with the name/email/location/message fields.
+- After a successful submission, people are redirected back to the site with a "Thanks" message instead of FormSubmit's generic confirmation page.
+- If you ever want more control (custom templates, logging to a spreadsheet, etc.), swap the form's `action` attribute for Formspree or a Cloudflare Pages Function instead — same drop-in pattern.
+
+The WhatsApp number (646-894-6811) is also linked in the header, the footer, and directly under the contact form via `wa.me` links — those just open a WhatsApp chat, no setup needed.
 
 ## 5. Deploy to Cloudflare Pages
 1. Push this folder to a GitHub repo (or use Cloudflare's direct upload).

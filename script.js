@@ -90,24 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Contact form ---
-  // NOTE: This is a static site with no backend. Submitting the form below
-  // only shows a confirmation message locally — it does NOT send an email.
-  // To actually receive submissions, wire this up to one of:
-  //   - Cloudflare Pages Functions (a small serverless function you deploy
-  //     alongside this site, e.g. /functions/contact.js) that forwards to
-  //     an email service (Resend, SendGrid, Postmark, etc.)
-  //   - A form backend like Formspree or Getform: change the <form> "action"
-  //     attribute to their endpoint and let it submit normally.
-  const form = document.getElementById("contact-form");
-  const note = document.getElementById("form-note");
-
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (note) {
-        note.textContent = "Got it — hook this form up to a backend (see script.js comments) to actually receive these.";
-      }
-      form.reset();
-    });
+  // The form submits directly to FormSubmit (see the action= attribute on
+  // the <form> in index.html) — no JS interception needed. It's a real
+  // browser form submission, so the built-in "required" field validation
+  // and normal submit behavior just work. After a successful submission,
+  // FormSubmit redirects back here with ?sent=1, and this just shows a
+  // thank-you line and cleans the URL back up.
+  const sentNote = document.getElementById("form-sent");
+  if (sentNote && new URLSearchParams(window.location.search).get("sent") === "1") {
+    sentNote.textContent = "Thanks — that's in. We'll get back to you within 2 business days.";
+    const cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState({}, document.title, cleanUrl);
   }
 });

@@ -71,11 +71,19 @@ button { font-family: inherit; cursor: pointer; }
 
 .site-nav { display: flex; align-items: center; gap: 2rem; }
 .site-nav a { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; position: relative; }
-.site-nav a:not(.nav-cta)::after {
+.site-nav a:not(.nav-cta):not(.wa-link)::after {
   content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 1px;
   background: var(--blue); transition: width 0.25s ease;
 }
-.site-nav a:not(.nav-cta):hover::after { width: 100%; }
+.site-nav a:not(.nav-cta):not(.wa-link):hover::after { width: 100%; }
+
+.wa-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--grey);
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+.wa-link:hover { color: #25D366; transform: translateY(-1px); }
+.wa-icon { width: 20px; height: 20px; display: block; }
 
 .nav-cta {
   background: var(--blue); color: var(--paper); padding: 0.55rem 1rem;
@@ -173,7 +181,7 @@ button { font-family: inherit; cursor: pointer; }
 .work { padding-bottom: clamp(3rem, 8vh, 5rem); }
 
 .ig-frame {
-  max-width: var(--max); margin: 0 auto; padding: 0 var(--edge);
+  max-width: 960px; margin: 0 auto; padding: 0 var(--edge);
 }
 
 .carousel {
@@ -321,7 +329,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--blue); }
 
-.form-note { min-height: 1.2em; color: var(--blue); font-size: 0.75rem; }
+.form-sent { min-height: 1.2em; color: var(--blue); font-size: 0.75rem; text-align: center; margin-top: 0.5rem; }
+
+.contact-direct {
+  margin-top: 1.75rem; text-align: center;
+  color: var(--grey); font-size: 0.72rem;
+}
+.contact-direct a { color: var(--blue); }
+.contact-direct a:hover { color: var(--paper); }
 
 /* =========================== FOOTER =========================== */
 .site-footer {
@@ -330,7 +345,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
 }
 .footer-top { display: flex; align-items: center; }
-.footer-links { display: flex; gap: 1.5rem; font-size: 0.75rem; }
+.footer-links { display: flex; align-items: center; gap: 1.5rem; font-size: 0.75rem; }
 .footer-links a:hover { color: var(--blue); }
 .footer-meta { color: var(--grey); font-size: 0.7rem; width: 100%; margin-top: 1rem; }
 

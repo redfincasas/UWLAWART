@@ -47,6 +47,9 @@
     <a href="#work">Work</a>
     <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
+    <a href="https://wa.me/16468946811" target="_blank" rel="noopener" class="wa-link" aria-label="Message us on WhatsApp">
+      <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.29-.15-1.73-.85-2-.95-.27-.1-.46-.15-.66.15-.19.29-.75.94-.92 1.14-.17.19-.34.21-.63.07-1.7-.85-2.81-1.51-3.93-3.43-.3-.51.3-.47.85-1.58.1-.19.05-.36-.05-.51-.1-.15-.6-1.44-.82-1.98-.22-.53-.44-.46-.61-.47h-.52c-.17 0-.44.06-.68.32s-.9.88-.9 2.15c0 1.27.92 2.5 1.05 2.67.13.17 1.79 2.75 4.42 3.83 2.19.9 2.63.72 3.1.68.48-.05 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.53-.32z"/><path fill="currentColor" d="M12.01 2C6.5 2 2 6.48 2 11.98c0 1.98.58 3.83 1.58 5.39L2 22l4.79-1.55a10.02 10.02 0 0 0 5.22 1.44c5.51 0 10.01-4.48 10.01-9.98C22.02 6.48 17.52 2 12.01 2zm0 18.14a8.1 8.1 0 0 1-4.36-1.27l-.31-.19-2.83.92.93-2.75-.2-.32a8.13 8.13 0 0 1-1.28-4.4c0-4.5 3.67-8.16 8.19-8.16 4.51 0 8.18 3.66 8.18 8.16 0 4.5-3.67 8.01-8.32 8.01z"/></svg>
+    </a>
     <a href="#contact" class="nav-cta">Start a project</a>
   </nav>
   <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -117,6 +120,10 @@
         <div class="carousel-slide"><img src="work/work-3.jpg" alt="UWLAW ART countryside landscape mural painted on a garage door" loading="lazy"></div>
         <div class="carousel-slide"><img src="work/work-4.jpg" alt="UWLAW ART Brooklyn Bridge mural" loading="lazy"></div>
         <div class="carousel-slide"><img src="work/work-5.jpg" alt="UWLAW ART Amigo Produce storefront mural" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-6.jpg" alt="UWLAW ART NYC subway car mural, 'NYC Still Rocks'" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-7.jpg" alt="UWLAW ART Gauchos basketball team mural with NYC skyline" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-8.jpg" alt="UWLAW ART green sports car mural" loading="lazy"></div>
+        <div class="carousel-slide"><img src="work/work-9.jpg" alt="UWLAW ART ice cream shop interior mural" loading="lazy"></div>
       </div>
 
       <button class="carousel-btn carousel-prev" aria-label="Previous photo">‹</button>
@@ -128,6 +135,10 @@
         <button class="carousel-dot" aria-label="Go to photo 3"></button>
         <button class="carousel-dot" aria-label="Go to photo 4"></button>
         <button class="carousel-dot" aria-label="Go to photo 5"></button>
+        <button class="carousel-dot" aria-label="Go to photo 6"></button>
+        <button class="carousel-dot" aria-label="Go to photo 7"></button>
+        <button class="carousel-dot" aria-label="Go to photo 8"></button>
+        <button class="carousel-dot" aria-label="Go to photo 9"></button>
       </div>
     </div>
   </div>
@@ -324,7 +335,17 @@
       Projects typically run $250–$50,000 depending on size, complexity, and timeline.
       Tell us about the wall and we'll get back within 2 business days.</p>
 
-    <form class="contact-form" id="contact-form">
+    <!--
+      This form submits directly to info@uwlawart.com via FormSubmit.co —
+      no backend, no signup required. The FIRST submission after this goes
+      live will trigger a one-time confirmation email to info@uwlawart.com;
+      someone needs to click "Activate Form" in that email once, and every
+      submission after that lands in the inbox normally.
+    -->
+    <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@uwlawart.com" method="POST">
+      <input type="hidden" name="_subject" value="New mural inquiry — uwlawart.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://uwlawart.com/?sent=1#contact">
       <div class="field">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -342,8 +363,14 @@
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary btn-wide">Send it</button>
-      <p class="form-note mono" id="form-note"></p>
+      <p class="form-sent mono" id="form-sent"></p>
     </form>
+
+    <p class="contact-direct mono">
+      OR REACH US DIRECTLY —
+      <a href="https://wa.me/16468946811" target="_blank" rel="noopener">WHATSAPP: (646) 894-6811</a>
+      · <a href="mailto:info@uwlawart.com">INFO@UWLAWART.COM</a>
+    </p>
   </div>
 </section>
 
@@ -357,6 +384,9 @@
     <a href="#work">Work</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
+    <a href="https://wa.me/16468946811" target="_blank" rel="noopener" class="wa-link" aria-label="Message us on WhatsApp">
+      <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.29-.15-1.73-.85-2-.95-.27-.1-.46-.15-.66.15-.19.29-.75.94-.92 1.14-.17.19-.34.21-.63.07-1.7-.85-2.81-1.51-3.93-3.43-.3-.51.3-.47.85-1.58.1-.19.05-.36-.05-.51-.1-.15-.6-1.44-.82-1.98-.22-.53-.44-.46-.61-.47h-.52c-.17 0-.44.06-.68.32s-.9.88-.9 2.15c0 1.27.92 2.5 1.05 2.67.13.17 1.79 2.75 4.42 3.83 2.19.9 2.63.72 3.1.68.48-.05 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.53-.32z"/><path fill="currentColor" d="M12.01 2C6.5 2 2 6.48 2 11.98c0 1.98.58 3.83 1.58 5.39L2 22l4.79-1.55a10.02 10.02 0 0 0 5.22 1.44c5.51 0 10.01-4.48 10.01-9.98C22.02 6.48 17.52 2 12.01 2zm0 18.14a8.1 8.1 0 0 1-4.36-1.27l-.31-.19-2.83.92.93-2.75-.2-.32a8.13 8.13 0 0 1-1.28-4.4c0-4.5 3.67-8.16 8.19-8.16 4.51 0 8.18 3.66 8.18 8.16 0 4.5-3.67 8.01-8.32 8.01z"/></svg>
+    </a>
   </div>
   <p class="footer-meta mono">MORRIS HEIGHTS, BRONX — SERVING NYC · © <span id="year"></span> UWLAW ART</p>
 </footer>
