@@ -333,10 +333,14 @@ button { font-family: inherit; cursor: pointer; }
 
 .contact-direct {
   margin-top: 1.75rem; text-align: center;
-  color: var(--grey); font-size: 0.72rem;
+  color: var(--paper); font-size: 1.05rem; font-weight: 600;
 }
 .contact-direct a { color: var(--blue); }
 .contact-direct a:hover { color: var(--paper); }
+
+@media (max-width: 640px) {
+  .contact-direct { font-size: 0.85rem; }
+}
 
 /* =========================== FOOTER =========================== */
 .site-footer {
